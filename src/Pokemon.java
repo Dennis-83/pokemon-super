@@ -4,6 +4,8 @@ public abstract class Pokemon {
     private int hp;
     private int xp;
     private final String sound;
+    private String food;
+
 
     // Constructor
 
@@ -46,11 +48,23 @@ public abstract class Pokemon {
         this.xp = xp;
     }
 
+    public String getFood() {
+        return food;
+    }
+
+    public void setFood(String food) {
+        this.food = food;
+    }
+
     // Methods
 
     public abstract void attack();
 
+    public void eat() {
+        System.out.println(name + " eats "+ food);
+    }
+
     public void makeSound() {
-        System.out.println(name + " shouts:" + sound + "!");
+        System.out.println(name + " shouts: " + sound + "!");
     }
 }
